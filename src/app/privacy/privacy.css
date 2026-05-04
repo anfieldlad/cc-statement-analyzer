@@ -1,0 +1,115 @@
+.privacy-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-bottom: var(--space-3xl);
+}
+
+.privacy-page-header {
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.privacy-page-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.privacy-page-meta {
+  margin-top: var(--space-sm);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.privacy-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.privacy-section h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.privacy-section p {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.privacy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-section strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.privacy-section a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.privacy-section code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  padding: 2px 6px;
+  background-color: var(--bg-elevated);
+  border-radius: 4px;
+  color: var(--text-primary);
+}
+
+.privacy-bullets,
+.privacy-steps {
+  padding-left: var(--space-lg);
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.privacy-bullets li,
+.privacy-steps li {
+  margin-bottom: var(--space-sm);
+}
+
+.privacy-bullets li:last-child,
+.privacy-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-bullets ul {
+  margin-top: var(--space-sm);
+  padding-left: var(--space-lg);
+  list-style: disc;
+}
+
+.privacy-steps li ul {
+  margin-top: var(--space-sm);
+  padding-left: var(--space-lg);
+  list-style: disc;
+}
+
+.privacy-callout {
+  padding: var(--space-xl);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-warning);
+  border-radius: var(--radius-md);
+}
+
+.privacy-note {
+  font-size: 0.8125rem !important;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.privacy-footer-link {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-2xl);
+}
