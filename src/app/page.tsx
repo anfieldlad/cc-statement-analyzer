@@ -167,6 +167,11 @@ export default function Home() {
           )}
         </div>
       </main>
+      <footer className="app-footer">
+        <div className="container">
+          Copyright by <a href="https://badai.tech/" target="_blank" rel="noopener noreferrer">BAD AI</a>
+        </div>
+      </footer>
     </>
   );
 }

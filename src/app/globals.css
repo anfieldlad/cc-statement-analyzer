@@ -137,6 +137,24 @@ main {
   padding: var(--space-2xl) 0 var(--space-3xl);
 }
 
+.app-footer {
+  padding: var(--space-lg) 0;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--border);
+}
+
+.app-footer a {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* ============================================================
    Animations
    ============================================================ */
