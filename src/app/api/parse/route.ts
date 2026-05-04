@@ -4,7 +4,7 @@ import { CATEGORIES } from "@/types";
 import { validateTransactions } from "@/lib/validators";
 
 export const runtime = "nodejs";
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 const SYSTEM_PROMPT = `You are a financial data extraction engine. Extract ALL transactions from this credit card statement text.
 
@@ -123,7 +123,7 @@ export async function POST(req: NextRequest) {
     });
 
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 28_000);
+    const timeout = setTimeout(() => controller.abort(), 58_000);
 
     let result;
     try {
