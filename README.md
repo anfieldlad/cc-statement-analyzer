@@ -1,5 +1,7 @@
 # cc-statement-analyzer
 
+**[GitHub Repository: anfieldlad/cc-statement-analyzer](https://github.com/anfieldlad/cc-statement-analyzer)**
+
 A privacy-first web app that parses encrypted credit card PDF statements and produces a categorized spending dashboard. Nothing is stored — close the tab and everything is gone.
 
 ## How it works
