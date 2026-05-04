@@ -45,7 +45,7 @@ export function transactionsToJson(
 }
 
 export function downloadFile(
-  content: string,
+  content: BlobPart,
   filename: string,
   mimeType: string
 ): void {
@@ -79,5 +79,32 @@ export function downloadJson(
     transactionsToJson(transactions, currency),
     `transactions-${Date.now()}.json`,
     "application/json;charset=utf-8"
+  );
+}
+
+export async function downloadExcel(
+  transactions: Transaction[],
+  currency: string
+): Promise<void> {
+  const xlsx = await import("xlsx");
+  
+  const decimals = currencyDecimals(currency);
+  const rows = transactions.map((t) => ({
+    Date: t.date,
+    Merchant: t.merchant,
+    "Raw Descriptor": t.rawMerchant,
+    [`Amount (${currency})`]: Number(t.amount.toFixed(decimals)),
+    Category: t.category,
+  }));
+
+  const worksheet = xlsx.utils.json_to_sheet(rows);
+  const workbook = xlsx.utils.book_new();
+  xlsx.utils.book_append_sheet(workbook, worksheet, "Transactions");
+  
+  const excelBuffer = xlsx.write(workbook, { bookType: "xlsx", type: "array" });
+  downloadFile(
+    excelBuffer,
+    `transactions-${Date.now()}.xlsx`,
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
   );
 }

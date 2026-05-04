@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Transaction } from "@/types";
-import { downloadCsv, downloadJson } from "@/lib/export";
+import { downloadCsv, downloadJson, downloadExcel } from "@/lib/export";
 import { ChevronDownIcon, DownloadIcon } from "./icons";
 
 interface ExportMenuProps {
@@ -60,6 +60,16 @@ export function ExportMenu({ transactions, currency }: ExportMenuProps) {
             }}
           >
             Download JSON
+          </button>
+          <button
+            type="button"
+            role="menuitem"
+            onClick={async () => {
+              await downloadExcel(transactions, currency);
+              setOpen(false);
+            }}
+          >
+            Download Excel
           </button>
         </div>
       )}
